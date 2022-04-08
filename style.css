@@ -41,9 +41,9 @@ html {
 .container {
     display: grid;
     width: 96%;
-    margin: 0 auto;
+    margin: 0 0;
     gap: 1.8rem;
-    grid-template-columns: 14rem auto 23rem;
+    grid-template-columns: 14rem auto auto;
 }
 
 body {
@@ -352,9 +352,10 @@ main .insights .text-muted {
     margin-top: 2rem;
 }
 
-main .insights .sales .text-muted {
+
+/* main .insights .sales .text-muted {
     margin-top: 3.6rem;
-}
+} */
 
 main .recent-orders {
     margin-top: 2rem;
@@ -398,4 +399,50 @@ main .recent-orders a {
     display: block;
     margin: 1rem auto;
     color: var(--color-primary);
+}
+
+.right {
+    margin-top: 1.4rem;
+}
+
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right .top button {
+    display: none;
+}
+
+.right .theme-toggler {
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-3);
+}
+
+.right .theme-toggler span {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right .theme-toggler span.active {
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-3);
+}
+
+.right .top .profile {
+    display: flex;
+    gap: 2rem;
+    text-align: right;
 }
