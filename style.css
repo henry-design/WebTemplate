@@ -134,17 +134,23 @@ aside .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1.4rem;
+    margin-top: 0.4rem;
 }
 
 aside .logo {
-    display: flex;
-    gap: 0.8rem;
+    /* display: flex; */
+    /* gap: 0.8rem; */
+    border-left: 0;
 }
 
 aside .logo img {
-    width: 2rem;
-    height: 2rem;
+    width: 13rem;
+    height: 5rem;
+    border-left: 0;
+}
+
+.title {
+    margin-left: 4rem;
 }
 
 aside .close {
@@ -156,7 +162,7 @@ aside .sidebar {
     flex-direction: column;
     height: 86vh;
     position: relative;
-    top: 3rem;
+    top: 2rem;
 }
 
 aside h3 {
@@ -246,7 +252,7 @@ main .date input[type='date'] {
 main .insights {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
+    gap: 1.5rem;
 }
 
 main .insights>div {
@@ -280,8 +286,8 @@ main .insights>div.income span {
     background: var(--color-success);
 }
 
-main .insights>div.middle {
-    display: inline-block;
+main .insights>div .middle {
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -308,9 +314,6 @@ main .insights svg circle {
     stroke: var(--color-primary);
     stroke-width: 14;
     stroke-linecap: round;
-    transform: translate(5px, 5px);
-    stroke-dasharray: 110;
-    stroke-dashoffset: 92;
 }
 
 main .insights .sales svg circle {
@@ -329,4 +332,30 @@ main .insights .income svg circle {
     transform: translate(5px, 5px);
     stroke-dasharray: 110;
     stroke-dashoffset: -20;
+}
+
+main .insights .progress .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .insights .text-muted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+main .insights .sales .text-muted {
+    margin-top: 3.6rem;
+}
+
+main .recent-orders {
+    margin-top: 2rem;
 }
