@@ -47,8 +47,8 @@ html {
 }
 
 body {
-    /* width: 100vw; */
-    /* height: 100vw; */
+    width: 100vw;
+    height: 100vw;
     font-family: Poppins, sans-serif;
     font-size: 0.88rem;
     background: var(--color-background);
@@ -227,7 +227,7 @@ aside .sidebar .message-count {
 
 main {
     margin-top: 1.4rem;
-    margin-right: 1.4rem;
+    /* margin-right: 1.4rem; */
 }
 
 main .date {
@@ -260,4 +260,73 @@ main .insights>div {
 
 main .insights>div:hover {
     box-shadow: none;
+    transform: rotate(3deg);
+    transition: all 500ms ease;
+}
+
+main .insights>div span {
+    background: var(--color-primary);
+    border-radius: 50%;
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: var(--color-white);
+}
+
+main .insights>div.expenses span {
+    background: var(--color-danger);
+}
+
+main .insights>div.income span {
+    background: var(--color-success);
+}
+
+main .insights>div.middle {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3 {
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+
+main .insights .progress {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+main .insights svg {
+    width: 7rem;
+    height: 7rem;
+}
+
+main .insights svg circle {
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+
+main .insights .sales svg circle {
+    transform: translate(5px, 5px);
+    stroke-dasharray: 180;
+    stroke-dashoffset: -20;
+}
+
+main .insights .expenses svg circle {
+    transform: translate(5px, 5px);
+    stroke-dasharray: 140;
+    stroke-dashoffset: -20;
+}
+
+main .insights .income svg circle {
+    transform: translate(5px, 5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: -20;
 }
