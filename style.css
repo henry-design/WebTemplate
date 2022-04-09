@@ -18,8 +18,8 @@
     --border-radius-1: 0.4rem;
     --border-radius-2: 0.8rem;
     --border-radius-3: 1.2rem;
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
+    --card-padding: 1.2rem;
+    --padding-1: 0.8rem;
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
@@ -140,13 +140,13 @@ aside .top {
 aside .logo {
     /* display: flex; */
     /* gap: 0.8rem; */
-    border-left: 0;
+    margin-left: 0px;
 }
 
 aside .logo img {
-    width: 13rem;
-    height: 5rem;
-    border-left: 0;
+    width: 11rem;
+    height: 4rem;
+    margin-left: 0px;
 }
 
 .title {
@@ -172,7 +172,7 @@ aside h3 {
 aside .sidebar a {
     display: flex;
     color: var(--color-info-dark);
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     gap: 1rem;
     align-items: center;
     position: relative;
@@ -448,9 +448,14 @@ main .recent-orders a {
     text-align: right;
 }
 
+.recent-updates {
+    margin-top: 1rem;
+}
+
 .right .recent-updates .updates {
+    margin-top: 1rem;
     background: var(--color-white);
-    padding: var(--card-padding);
+    padding: 1rem;
     border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
     transition: all 300ms ease-in-out;
