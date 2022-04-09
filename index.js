@@ -1,19 +1,13 @@
-console.log("Html connected");
+const sideMenu = document.querySelector('aside');
+const menuBtn = document.querySelector('#menu-btn');
+const closeBtn = document.querySelector('#close-btn');
+const themeToggler = document.querySelector('.theme-toggler');
 
-function myMove() {
-    let id = null;
-    const elem = document.getElementById("animate");
-    let pos = 0;
-    clearInterval(id);
-    id = setInterval(frame, 20);
+menuBtn.addEventListener('click', () => { sideMenu.style.display = 'block' })
+closeBtn.addEventListener('click', () => { sideMenu.style.display = 'none' })
 
-    function frame() {
-        if (pos == 350) {
-            clearInterval(id);
-        } else {
-            pos++;
-            elem.style.top = pos + 'px';
-            elem.style.left = pos + 'px';
-        }
-    }
-}
+themeToggler.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme-variables');
+    themeToggler.querySelector('span:nth-child(1)').classList.toggle('active')
+    themeToggler.querySelector('span:nth-child(2)').classList.toggle('active')
+})
